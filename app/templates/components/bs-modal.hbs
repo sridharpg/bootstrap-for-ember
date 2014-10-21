@@ -18,7 +18,7 @@
         </div>
         <div {{bind-attr class=":modal-footer fullSizeButtons:modal-footer-full"}}>
             {{#each footerButtons}}
-                {{bs-button content=this targetObjectBinding="view.targetObject"}}
+                {{bs-button content=this data-loading-text="Loading..." loading=loadingState targetObjectBinding="view.targetObject"}}
             {{/each}}
             {{#each footerViews}}
                 {{view this}}
