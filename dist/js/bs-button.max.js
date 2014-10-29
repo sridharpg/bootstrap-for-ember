@@ -127,8 +127,8 @@
     init: function() {
       var attr, c, key, _i, _len, _ref, _results;
       this._super();
-      if ((this.get('content') != null) && Ember.typeOf(this.get('content')) === 'instance') {
-        c = this.get('content');
+      if ((this.get('model') != null) && Ember.typeOf(this.get('model')) === 'instance') {
+        c = this.get('model');
         _ref = this.get('allowedProperties');
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           key = _ref[_i];
@@ -138,7 +138,7 @@
         }
       } else {
         if (this.get('title') == null) {
-          this.set('title', this.get('content'));
+          this.set('title', this.get('model'));
         }
       }
       _results = [];
