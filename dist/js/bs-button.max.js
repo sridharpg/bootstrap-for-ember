@@ -117,10 +117,10 @@
     classTypePrefix: 'btn',
     clickedParam: null,
     block: null,
-    attributeBindings: ['disabled', 'dismiss:data-dismiss', '_type:type', 'style'],
+    attributeBindings: ['disabled', 'dismiss:data-dismiss', '_type:type', 'style', 'loadingText:data-loading-text', 'completedText:data-completed-text', 'loading', 'clicked'],
     _type: 'button',
     bubbles: true,
-    allowedProperties: ['title', 'type', 'size', 'block', 'disabled', 'clicked', 'dismiss', 'class'],
+    allowedProperties: ['title', 'type', 'size', 'block', 'disabled', 'clicked', 'dismiss', 'class', 'loadingText', 'completedText', 'loading'],
     icon_active: void 0,
     icon_inactive: void 0
   }, {
