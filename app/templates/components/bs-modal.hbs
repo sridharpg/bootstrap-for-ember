@@ -17,8 +17,12 @@
             {{/if}}
         </div>
         <div {{bind-attr class=":modal-footer fullSizeButtons:modal-footer-full"}}>
-            {{#each footerButtons}}
-                {{bs-button content=this data-loading-text="Loading..." loading=loadingState targetObjectBinding="view.targetObject"}}
+            {{#each button in footerButtons}}
+                {{#if button.dismiss}}
+                    {{bs-button model=button targetObjectBinding="view.targetObject"}}
+                {{else}}
+                    {{bs-button model=button targetObjectBinding="view.targetObject" loading=loadingState}}
+                {{/if}}
             {{/each}}
             {{#each footerViews}}
                 {{view this}}

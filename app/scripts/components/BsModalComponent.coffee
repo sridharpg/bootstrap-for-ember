@@ -21,6 +21,8 @@ Bootstrap.BsModalComponent = Ember.Component.extend(Ember.Evented,
     isVis: false
     fullSizeButtons: false
     fade: true
+    allowClose: true
+    loadingState: null
     
     didInsertElement: ->
         @._super()
@@ -195,6 +197,8 @@ Bootstrap.ModalManager = Ember.Object.create(
             )
 
         modalComponent.appendTo(controller.namespace.rootElement)
+
+        return modalComponent
 )
 
 
