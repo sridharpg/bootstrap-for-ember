@@ -81,12 +81,9 @@ Bootstrap.BsModalComponent = Ember.Component.extend(Ember.Evented,
 
     close: (event) ->
         @set 'isVis', false
-        current = this
-        @$().one 'webkitTransitionEnd', (e) ->
-            if current.get('manual') then current.destroy() else current.hide()
-            return
-         @trigger 'closed'
-        
+        current = this        
+        if current.get('manual') then current.destroy() else current.hide()        
+        @trigger 'closed'
 
     #Invoked automatically by ember when the view is destroyed, giving us a chance to perform cleanups
     willDestroyElement: ->

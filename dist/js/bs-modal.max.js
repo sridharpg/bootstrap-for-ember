@@ -92,13 +92,11 @@ Modal component.
       var current;
       this.set('isVis', false);
       current = this;
-      this.$().one('webkitTransitionEnd', function(e) {
-        if (current.get('manual')) {
-          current.destroy();
-        } else {
-          current.hide();
-        }
-      });
+      if (current.get('manual')) {
+        current.destroy();
+      } else {
+        current.hide();
+      }
       return this.trigger('closed');
     },
     willDestroyElement: function() {
