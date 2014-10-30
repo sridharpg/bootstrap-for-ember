@@ -12,6 +12,8 @@ Bootstrap.BsButtonComponent = Ember.Component.extend(Bootstrap.TypeSupport, Boot
     allowedProperties: ['title', 'type', 'size', 'block', 'disabled', 'clicked', 'dismiss', 'class', 'loadingText', 'failText', 'successText', 'loading']
     icon_active: undefined
     icon_inactive: undefined
+    successText: 'Saved!'
+    failText: 'Failed!'
 
    init: ->
        @_super()
