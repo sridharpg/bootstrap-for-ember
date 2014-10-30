@@ -18,10 +18,10 @@
         </div>
         <div {{bind-attr class=":modal-footer fullSizeButtons:modal-footer-full"}}>
             {{#each button in footerButtons}}
-                {{#if button.dismiss}}
-                    {{bs-button model=button targetObjectBinding="view.targetObject"}}
-                {{else}}
+                {{#if button.loadingText}}
                     {{bs-button model=button targetObjectBinding="view.targetObject" loading=loadingState}}
+                {{else}}
+                    {{bs-button model=button targetObjectBinding="view.targetObject"}}
                 {{/if}}
             {{/each}}
             {{#each footerViews}}

@@ -350,7 +350,7 @@ function program7(depth0,data) {
   data.buffer.push("\n                ");
   hashTypes = {};
   hashContexts = {};
-  stack1 = helpers['if'].call(depth0, "button.dismiss", {hash:{},inverse:self.program(10, program10, data),fn:self.program(8, program8, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
+  stack1 = helpers['if'].call(depth0, "button.loadingText", {hash:{},inverse:self.program(10, program10, data),fn:self.program(8, program8, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n            ");
   return buffer;
@@ -359,11 +359,12 @@ function program8(depth0,data) {
   
   var buffer = '', stack1, hashContexts, hashTypes, options;
   data.buffer.push("\n                    ");
-  hashContexts = {'model': depth0,'targetObjectBinding': depth0};
-  hashTypes = {'model': "ID",'targetObjectBinding': "STRING"};
+  hashContexts = {'model': depth0,'targetObjectBinding': depth0,'loading': depth0};
+  hashTypes = {'model': "ID",'targetObjectBinding': "STRING",'loading': "ID"};
   options = {hash:{
     'model': ("button"),
-    'targetObjectBinding': ("view.targetObject")
+    'targetObjectBinding': ("view.targetObject"),
+    'loading': ("loadingState")
   },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   data.buffer.push(escapeExpression(((stack1 = helpers['bs-button'] || depth0['bs-button']),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "bs-button", options))));
   data.buffer.push("\n                ");
@@ -374,12 +375,11 @@ function program10(depth0,data) {
   
   var buffer = '', stack1, hashContexts, hashTypes, options;
   data.buffer.push("\n                    ");
-  hashContexts = {'model': depth0,'targetObjectBinding': depth0,'loading': depth0};
-  hashTypes = {'model': "ID",'targetObjectBinding': "STRING",'loading': "ID"};
+  hashContexts = {'model': depth0,'targetObjectBinding': depth0};
+  hashTypes = {'model': "ID",'targetObjectBinding': "STRING"};
   options = {hash:{
     'model': ("button"),
-    'targetObjectBinding': ("view.targetObject"),
-    'loading': ("loadingState")
+    'targetObjectBinding': ("view.targetObject")
   },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   data.buffer.push(escapeExpression(((stack1 = helpers['bs-button'] || depth0['bs-button']),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "bs-button", options))));
   data.buffer.push("\n                ");
