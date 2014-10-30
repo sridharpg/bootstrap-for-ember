@@ -117,7 +117,7 @@
     classTypePrefix: 'btn',
     clickedParam: null,
     block: null,
-    attributeBindings: ['disabled', 'dismiss:data-dismiss', '_type:type', 'style', 'loadingText:data-loading-text', 'completedText:data-completed-text', 'loading', 'clicked'],
+    attributeBindings: ['disabled', 'dismiss:data-dismiss', '_type:type', 'style', 'loadingText:data-loading-text', 'failText:data-fail-text', 'successText:data-success-text', 'loading', 'clicked'],
     _type: 'button',
     bubbles: true,
     allowedProperties: ['title', 'type', 'size', 'block', 'disabled', 'clicked', 'dismiss', 'class', 'loadingText', 'completedText', 'loading'],

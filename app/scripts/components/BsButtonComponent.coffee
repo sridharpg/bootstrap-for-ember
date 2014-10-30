@@ -6,7 +6,7 @@ Bootstrap.BsButtonComponent = Ember.Component.extend(Bootstrap.TypeSupport, Boot
     classTypePrefix: 'btn'
     clickedParam: null
     block: null
-    attributeBindings: ['disabled', 'dismiss:data-dismiss', '_type:type', 'style', 'loadingText:data-loading-text', 'completedText:data-completed-text', 'loading', 'clicked']
+    attributeBindings: ['disabled', 'dismiss:data-dismiss', '_type:type', 'style', 'loadingText:data-loading-text', 'failText:data-fail-text', 'successText:data-success-text', 'loading', 'clicked']
     _type: 'button'
     bubbles: true
     allowedProperties: ['title', 'type', 'size', 'block', 'disabled', 'clicked', 'dismiss', 'class', 'loadingText', 'completedText', 'loading']
@@ -15,7 +15,7 @@ Bootstrap.BsButtonComponent = Ember.Component.extend(Bootstrap.TypeSupport, Boot
 
    init: ->
        @_super()
-       # If content is an object (may happen when a button is the view class of a collectionView), then assign allowed properties to the button component.
+       # If model is an object (may happen when a button is the view class of a collectionView), then assign allowed properties to the button component.
        if @get('model')? and Ember.typeOf(@get('model')) is 'instance'
            c = @get('model')
            @set key, c[key] for key in @get('allowedProperties') when c[key]?
