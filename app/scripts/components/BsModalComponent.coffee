@@ -60,9 +60,9 @@ Bootstrap.BsModalComponent = Ember.Component.extend(Ember.Evented,
     hide: ->
         @set 'isVis', false
         current = this
-        @$().one 'webkitTransitionEnd', (e) ->
-            current.set 'isVisible', false
-            return
+        #@$().one 'webkitTransitionEnd', (e) ->
+        current.set 'isVisible', false
+        #    return
         false
 
     toggle: ->

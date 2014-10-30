@@ -67,9 +67,7 @@ Modal component.
       var current;
       this.set('isVis', false);
       current = this;
-      this.$().one('webkitTransitionEnd', function(e) {
-        current.set('isVisible', false);
-      });
+      current.set('isVisible', false);
       return false;
     },
     toggle: function() {
