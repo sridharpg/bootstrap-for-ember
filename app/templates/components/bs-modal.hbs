@@ -19,9 +19,9 @@
         <div {{bind-attr class=":modal-footer fullSizeButtons:modal-footer-full"}}>
             {{#each button in footerButtons}}
                 {{#if button.loadingText}}
-                    {{bs-button model=button targetObjectBinding="view.targetObject" loading=loadingState}}
+                    {{bs-button content=button targetObjectBinding="view.targetObject" loading=loadingState}}
                 {{else}}
-                    {{bs-button model=button targetObjectBinding="view.targetObject"}}
+                    {{bs-button content=button targetObjectBinding="view.targetObject"}}
                 {{/if}}
             {{/each}}
             {{#each footerViews}}

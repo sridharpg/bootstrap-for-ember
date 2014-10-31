@@ -17,13 +17,13 @@ Bootstrap.BsButtonComponent = Ember.Component.extend(Bootstrap.TypeSupport, Boot
 
    init: ->
        @_super()
-       # If model is an object (may happen when a button is the view class of a collectionView), then assign allowed properties to the button component.
-       if @get('model')? and Ember.typeOf(@get('model')) is 'instance'
-           c = @get('model')
+       # If content is an object (may happen when a button is the view class of a collectionView), then assign allowed properties to the button component.
+       if @get('content')? and Ember.typeOf(@get('content')) is 'instance'
+           c = @get('content')
            @set key, c[key] for key in @get('allowedProperties') when c[key]?
        else
            if not @get('title')?
-               @set('title', @get('model'))
+               @set('title', @get('content'))
        @attributeBindings.pushObject attr for attr of @ when attr.match(/^data-[\w-]*$/)?
 
     blockClass: ( ->
