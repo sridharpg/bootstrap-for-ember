@@ -60,7 +60,12 @@ Modal component.
       this.set('isVisible', true);
       current = this;
       setTimeout((function() {
-        current.set('isVis', true);
+        return Ember.run(function() {
+          if (current.get('isDestroyed') || current.get('isDestroying')) {
+            return;
+          }
+          current.set('isVis', true);
+        });
       }), 15);
     },
     hide: function() {
