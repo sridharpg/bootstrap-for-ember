@@ -51,15 +51,12 @@ Bootstrap.BsModalComponent = Ember.Component.extend(Ember.Evented,
     show: ->
         @set 'isVisible', true
         current = this
-        setTimeout (->
-            Ember.run(->
-                if current.get('isDestroyed') or current.get('isDestroying')
-                    return
-                current.set 'isVis', true
+        Ember.run.later (->
+            if current.get('isDestroyed') or current.get('isDestroying')
                 return
-            )
+            current.set 'isVis', true
+            return
         ), 15
-        return
 
     hide: ->
         @set 'isVis', false
