@@ -120,7 +120,7 @@
     attributeBindings: ['disabled', 'dismiss:data-dismiss', '_type:type', 'style', 'loadingText:data-loading-text', 'failText:data-fail-text', 'successText:data-success-text', 'loading', 'clicked'],
     _type: 'button',
     bubbles: true,
-    allowedProperties: ['title', 'type', 'size', 'block', 'disabled', 'clicked', 'dismiss', 'class', 'loadingText', 'failText', 'successText', 'loading'],
+    allowedProperties: ['title', '_type', 'type', 'size', 'block', 'disabled', 'clicked', 'dismiss', 'class', 'loadingText', 'failText', 'successText', 'loading'],
     icon_active: void 0,
     icon_inactive: void 0,
     successText: 'Saved!',
