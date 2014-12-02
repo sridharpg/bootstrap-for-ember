@@ -73,12 +73,7 @@
       if (this.get("template")) {
         name = "components/bs-popover/partial-content-" + this.get("tip_id");
         tpl = this.get("data.template");
-        if (typeof tpl === "function") {
-          Ember.TEMPLATES[name] = tpl;
-        } else {
-          Ember.TEMPLATES[name] = Ember.Handlebars.compile(tpl);
-        }
-        return this.set("partialTemplateName", name);
+        return this.set("partialTemplateName", tpl);
       }
     },
     didInsertElement: function() {
