@@ -110,11 +110,7 @@ Bootstrap.BsPopoverComponent = Ember.Component.extend(
         if @get("template")
             name = "components/bs-popover/partial-content-" + @get("tip_id")
             tpl = @get("data.template")
-            if typeof tpl is "function"
-                Ember.TEMPLATES[name] = tpl
-            else
-                Ember.TEMPLATES[name] = Ember.Handlebars.compile(tpl)
-            @set "partialTemplateName", name
+            @set "partialTemplateName", tpl
 
     didInsertElement: ->
         @$tip = @$()
