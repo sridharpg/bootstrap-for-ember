@@ -71,7 +71,7 @@
       this.set("html", this.get("data.html") || false);
       this.set("template", this.get("data.template") !== undefined);
       if (this.get("template")) {
-        name = "components/bs-popover/_partial-content-" + this.get("tip_id");
+        name = "components/bs-popover/partial-content-" + this.get("tip_id");
         tpl = this.get("data.template");
         if (typeof tpl === "function") {
           Ember.TEMPLATES[name] = tpl;

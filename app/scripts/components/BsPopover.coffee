@@ -108,7 +108,7 @@ Bootstrap.BsPopoverComponent = Ember.Component.extend(
         @set "html", @get("data.html") or false
         @set "template", @get("data.template") isnt `undefined`
         if @get("template")
-            name = "components/bs-popover/_partial-content-" + @get("tip_id")
+            name = "components/bs-popover/partial-content-" + @get("tip_id")
             tpl = @get("data.template")
             if typeof tpl is "function"
                 Ember.TEMPLATES[name] = tpl
