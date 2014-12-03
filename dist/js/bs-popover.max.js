@@ -90,7 +90,7 @@
         });
       }
       this.$().on("mouseleave", function() {
-        return Bootstrap.TooltipBoxManager.removeTip(_this.get("tip_id"));
+        return _this.sendAction("close");
       });
       return this.$().find("img").load(function() {
         return _this.afterRender();
@@ -160,7 +160,13 @@
     },
     actions: {
       close: function() {
-        return Bootstrap.TooltipBoxManager.removeTip(this.get("tip_id"));
+        Bootstrap.TooltipBoxManager.removeTip(this.get("tip_id"));
+        return this.sendAction("close");
+      },
+      test: function() {
+        console.log("closing22...");
+        this.sendAction("test");
+        return true;
       }
     }
   });
