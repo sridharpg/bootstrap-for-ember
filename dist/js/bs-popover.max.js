@@ -89,9 +89,6 @@
           return clearTimeout(Bootstrap.TooltipBoxManager.timeout);
         });
       }
-      this.$().on("mouseleave", function() {
-        return Bootstrap.TooltipBoxManager.removeTip(_this.get("tip_id"));
-      });
       return this.$().find("img").load(function() {
         return _this.afterRender();
       });

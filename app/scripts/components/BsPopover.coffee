@@ -123,8 +123,8 @@ Bootstrap.BsPopoverComponent = Ember.Component.extend(
             @$().on "mouseenter", ->
                 clearTimeout Bootstrap.TooltipBoxManager.timeout
 
-        @$().on "mouseleave", =>
-            Bootstrap.TooltipBoxManager.removeTip @get("tip_id")            
+        # @$().on "mouseleave", =>
+        #     Bootstrap.TooltipBoxManager.removeTip @get("tip_id")            
 
         @$().find("img").load =>
             @afterRender()
