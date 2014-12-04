@@ -161,11 +161,7 @@
     actions: {
       close: function(selectedItem) {
         Bootstrap.TooltipBoxManager.removeTip(this.get("tip_id"));
-        console.log(selectedItem);
         return this.sendAction("action", selectedItem);
-      },
-      click: function() {
-        return console.log("clicking..");
       }
     }
   });
