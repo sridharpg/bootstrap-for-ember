@@ -124,7 +124,7 @@ Bootstrap.BsPopoverComponent = Ember.Component.extend(
                 clearTimeout Bootstrap.TooltipBoxManager.timeout
 
         @$().on "mouseleave", =>
-            Bootstrap.TooltipBoxManager.removeTip @get("tip_id")
+            Bootstrap.TooltipBoxManager.removeTip @get("tip_id")            
 
         @$().find("img").load =>
             @afterRender()
@@ -183,9 +183,10 @@ Bootstrap.BsPopoverComponent = Ember.Component.extend(
             left: pos.left + pos.width
 
     actions:
-        close: ->
+        close: (selectedItem) ->
             Bootstrap.TooltipBoxManager.removeTip @get("tip_id")
-            @sendAction "close"
+            @sendAction "action", selectedItem
+
 )
 
 Ember.Handlebars.helper 'bs-popover', Bootstrap.BsPopoverComponent
@@ -226,6 +227,7 @@ template = "" +
     "   {{bs-popover" +
     "       tip_id=pop.tip_id" +
     "       data=pop.data" +
+    "       action=pop.data.action" +
     "   }}" +
     "{{/each}}" +
     "{{#each pop in tooltips}}" +

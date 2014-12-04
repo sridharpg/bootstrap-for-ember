@@ -90,7 +90,7 @@
         });
       }
       this.$().on("mouseleave", function() {
-        return _this.sendAction("close");
+        return Bootstrap.TooltipBoxManager.removeTip(_this.get("tip_id"));
       });
       return this.$().find("img").load(function() {
         return _this.afterRender();
@@ -159,14 +159,13 @@
       }
     },
     actions: {
-      close: function() {
+      close: function(selectedItem) {
         Bootstrap.TooltipBoxManager.removeTip(this.get("tip_id"));
-        return this.sendAction("close");
+        console.log(selectedItem);
+        return this.sendAction("action", selectedItem);
       },
-      test: function() {
-        console.log("closing22...");
-        this.sendAction("test");
-        return true;
+      click: function() {
+        return console.log("clicking..");
       }
     }
   });
@@ -196,7 +195,7 @@
     tooltipsBinding: "Bootstrap.TooltipBoxManager.tooltips"
   });
 
-  template = "" + "{{#each pop in popovers}}" + "   {{bs-popover" + "       tip_id=pop.tip_id" + "       data=pop.data" + "   }}" + "{{/each}}" + "{{#each pop in tooltips}}" + "   {{bs-tooltip" + "       tip_id=pop.tip_id" + "       data=pop.data" + "   }}" + "{{/each}}";
+  template = "" + "{{#each pop in popovers}}" + "   {{bs-popover" + "       tip_id=pop.tip_id" + "       data=pop.data" + "       action=pop.data.action" + "   }}" + "{{/each}}" + "{{#each pop in tooltips}}" + "   {{bs-tooltip" + "       tip_id=pop.tip_id" + "       data=pop.data" + "   }}" + "{{/each}}";
 
   Ember.TEMPLATES["bs-tooltip-box"] = Ember.Handlebars.compile(template);
 
