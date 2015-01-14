@@ -234,6 +234,11 @@
         });
       }
       options.data.view.on("willClearRender", function() {
+        var pop;
+        pop = self.registeredTips[id];
+        if (pop.eventName === 'manual') {
+          pop.data.removeObserver("show", pop, self.manualObserver);
+        }
         Bootstrap.TooltipBoxManager.removeTip(id);
         $("[" + self.attribute + "='" + id + "']").unbind();
         delete Bootstrap.TooltipBoxManager.registeredTips[id];
@@ -260,15 +265,7 @@
               elem.on("focusout", $.proxy(pop.hide, pop));
               break;
             case "manual":
-              pop.data.addObserver("show", pop, function(sender, key) {
-                var value;
-                value = sender.get(key);
-                if (value) {
-                  this.show();
-                } else {
-                  this.hide();
-                }
-              });
+              pop.data.addObserver("show", pop, this.manualObserver);
               if (pop.data.show) {
                 this.show();
               }
@@ -343,6 +340,15 @@
       };
       id = Bootstrap.TooltipBoxManager.registerTip(type, object, options);
       view.set(Bootstrap.TooltipBoxManager.attribute, id);
+    },
+    manualObserver: function(sender, key) {
+      var value;
+      value = sender.get(key);
+      if (value) {
+        this.show();
+      } else {
+        this.hide();
+      }
     },
     helper: function(path, object, options) {
       var binding, keyword, name, o, p, type, value;
