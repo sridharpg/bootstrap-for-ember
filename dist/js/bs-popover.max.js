@@ -234,6 +234,11 @@
         });
       }
       options.data.view.on("willClearRender", function() {
+        var pop;
+        pop = self.registeredTips[id];
+        if (pop.eventName === 'manual') {
+          pop.data.removeObserver("show", pop);
+        }
         Bootstrap.TooltipBoxManager.removeTip(id);
         $("[" + self.attribute + "='" + id + "']").unbind();
         delete Bootstrap.TooltipBoxManager.registeredTips[id];

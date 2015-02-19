@@ -280,6 +280,9 @@ Bootstrap.TooltipBoxManager = Ember.Object.create(
         return
 
     options.data.view.on "willClearRender", ->
+      pop = self.registeredTips[id]
+      if pop.eventName is 'manual'
+        pop.data.removeObserver "show", pop
       Bootstrap.TooltipBoxManager.removeTip id
       $("[" + self.attribute + "='" + id + "']").unbind()
       delete Bootstrap.TooltipBoxManager.registeredTips[id]
