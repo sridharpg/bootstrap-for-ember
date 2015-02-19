@@ -23,7 +23,8 @@ Bootstrap.BsAlertComponent = Ember.Component.extend(Bootstrap.TypeSupport,
         )
 
     dismiss: () ->
-        Ember.$("##{@elementId}").alert('close')
+        Ember.run () ->
+            Ember.$("##{@elementId}").alert('close')
 
 )
 

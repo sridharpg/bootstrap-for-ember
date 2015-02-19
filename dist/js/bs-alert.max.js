@@ -120,7 +120,9 @@
       });
     },
     dismiss: function() {
-      return Ember.$("#" + this.elementId).alert('close');
+      return Ember.run(function() {
+        return Ember.$("#" + this.elementId).alert('close');
+      });
     }
   });
 
