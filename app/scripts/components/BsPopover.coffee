@@ -280,9 +280,6 @@ Bootstrap.TooltipBoxManager = Ember.Object.create(
         return
 
     options.data.view.on "willClearRender", ->
-      pop = self.registeredTips[id]
-      if pop.eventName is 'manual'
-        pop.data.removeObserver "show", pop, self.manualObserver
       Bootstrap.TooltipBoxManager.removeTip id
       $("[" + self.attribute + "='" + id + "']").unbind()
       delete Bootstrap.TooltipBoxManager.registeredTips[id]
@@ -307,7 +304,13 @@ Bootstrap.TooltipBoxManager = Ember.Object.create(
             elem.on "focusin", $.proxy(pop.show, pop)
             elem.on "focusout", $.proxy(pop.hide, pop)
           when "manual"
-            pop.data.addObserver "show", pop, @manualObserver
+            pop.data.addObserver "show", pop, (sender, key) ->
+              value = sender.get(key)
+              if value
+                @show()
+              else
+                @hide()
+              return
 
             @show()  if pop.data.show
     @willSetup = false
@@ -373,14 +376,6 @@ Bootstrap.TooltipBoxManager = Ember.Object.create(
 
     id = Bootstrap.TooltipBoxManager.registerTip(type, object, options)
     view.set Bootstrap.TooltipBoxManager.attribute, id
-    return
-
-  manualObserver: (sender, key) ->
-    value = sender.get(key)
-    if value
-      @show()
-    else
-      @hide()
     return
 
   helper: (path, object, options) ->
