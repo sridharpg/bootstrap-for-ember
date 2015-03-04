@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {{outlet bs-tooltip-box}}
-    <!-- Meta, title, CSS, favicons, etc. -->
+    {{outlet "bs-tooltip-box"}}
+    {{! Meta, title, CSS, favicons, etc. }}
     {{partial "header"}}
-    <!-- Place anything custom after this. -->
-  </head>
-  <body>
+    {{! Place anything custom after this. }}
     <a class="sr-only" href="#content">Skip navigation</a>
-    <!-- Docs master nav -->
+    {{! Docs master nav }}
     {{partial "nav-main"}}
     {{bs-notifications style="z-index: 9999; position: fixed; width: 50%; left: 0; right: 0; margin-left: auto; margin-right: auto; margin-top: 50px;"}}
     {{bs-growl-notifications}}
-    <!-- Docs page layout -->
-    <div class="bs-header" id="content">
+    
+    <div class="bs-header" id="content22">
       <div class="container">
         <p>{{ page.lead }}</p>
         {{partial "ads"}}
@@ -37,15 +32,13 @@
 
     </div>
 
-    <!-- Footer
-    ================================================== -->
+    {{! Footer
+    ================================================== }}
     <footer class="bs-footer" role="contentinfo">
       <div class="container">
         {{partial social-buttons}}
       </div>
     </footer>
 
-    <!-- JS and analytics only. -->
+    {{! JS and analytics only. }}
     {{partial footer}}
-  </body>
-</html>

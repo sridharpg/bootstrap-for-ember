@@ -37,9 +37,9 @@ module.exports = function (grunt) {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server']
             },
-            ember_handlebars: {
+            emberTemplates: {
                 files: '<%= yeoman.app %>/templates/**/*.hbs',
-                tasks: ['ember_handlebars']
+                tasks: ['emberTemplates']
             },
             markdown: {
                 files: '<%= yeoman.app %>/templates/**/*.md',
@@ -309,7 +309,7 @@ module.exports = function (grunt) {
             server: [
                 'compass',
                 'markdown',
-                'ember_handlebars',
+                'emberTemplates',
                 'coffee:dist'
             ],
             test: [
@@ -318,21 +318,21 @@ module.exports = function (grunt) {
             dist: [
                 'coffee',
                 'markdown',
-                'ember_handlebars',
+                'emberTemplates',
                 'compass',
                 'imagemin',
                 'svgmin',
                 'htmlmin'
             ]
         },
-        ember_handlebars: {
+        emberTemplates: {
             compile_components: {
                 options: {
-                    processName: function(filename) {
-                        var fromComponent = filename.substring(filename.lastIndexOf('/components/')+1,filename.length);
-                        return fromComponent.substring(0,fromComponent.length-4);
+                    templateName: function(filename) {
+                        return filename.substring(filename.lastIndexOf('/components/')+1,filename.length);
                     },
-                    namespace: "Ember.TEMPLATES"
+                    templateCompilerPath: 'app/bower_components/ember/ember-template-compiler.js',
+                    handlebarsPath: 'app/bower_components/handlebars/handlebars.js'
                 },
                 files: {
                     '.tmp/scripts/bs-core.js': '<%= yeoman.app %>/templates/views/item-pane.hbs',
@@ -356,11 +356,11 @@ module.exports = function (grunt) {
             },
             compile_showcase: {
                 options: {
-                    processName: function(filename) {
-                        var fromShowcase = filename.substring(filename.lastIndexOf('/showcase/')+1,filename.length)
-                        return fromShowcase.substring(fromShowcase.indexOf('/')+1,fromShowcase.length-4);
+                    templateName: function(filename) {
+                        return filename.substring(filename.lastIndexOf('/showcase/')+1,filename.length).replace('showcase/', '');
                     },
-                    namespace: "Ember.TEMPLATES"
+                    templateCompilerPath: 'app/bower_components/ember/ember-template-compiler.js',
+                    handlebarsPath: 'app/bower_components/handlebars/handlebars.js'
                 },
                 files: {
                     '.tmp/scripts/showcase-templates.js': '<%= yeoman.app %>/templates/showcase/**/*.hbs'
@@ -445,7 +445,6 @@ module.exports = function (grunt) {
         'concat',
         'copy:unminified',
         'cssmin',
-        'uglify',
         'copy:dist',
         'rev',
         'usemin'

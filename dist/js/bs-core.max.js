@@ -98,7 +98,7 @@
       }
       pref = this.get('classTypePrefix');
       return "" + pref + "-" + type;
-    }).property('type').cacheable()
+    }).property('type')
   });
 
 }).call(this);
@@ -127,7 +127,7 @@
       } else {
         return null;
       }
-    }).property('xs').cacheable(),
+    }).property('xs'),
     smallSizeClass: (function() {
       var pref;
       pref = this.get('classTypePrefix');
@@ -136,7 +136,7 @@
       } else {
         return null;
       }
-    }).property('small').cacheable(),
+    }).property('small'),
     largeSizeClass: (function() {
       var pref;
       pref = this.get('classTypePrefix');
@@ -145,7 +145,7 @@
       } else {
         return null;
       }
-    }).property('large').cacheable(),
+    }).property('large'),
     sizeClass: (function() {
       var pref, size;
       size = this.get('size');
@@ -155,7 +155,7 @@
       } else {
         return null;
       }
-    }).property('size').cacheable()
+    }).property('size')
   });
 
 }).call(this);
@@ -180,7 +180,7 @@ A mixin for Items that have a value property
       }
       value = this.get('content');
       return value;
-    }).property('content').cacheable()
+    }).property('content')
   });
 
 }).call(this);
@@ -234,7 +234,7 @@ An extra 'active' css class will be assigned to the Item (this) if this is a sel
         return false;
       }
       return selected === value;
-    }).property('value', 'parentView.selected', 'content.linkTo').cacheable(),
+    }).property('value', 'parentView.selected', 'content.linkTo'),
     /*
     Handle selection by click event.
     
@@ -301,7 +301,7 @@ A Mixin that provides the basic configuration for rendering a Bootstrap navigati
       } else {
         return null;
       }
-    }).property('navType').cacheable()
+    }).property('navType')
   });
 
 }).call(this);
@@ -366,7 +366,7 @@ A Mixin that provides the basic configuration for rendering and interacting with
       itemTitleKey = itemsView.get('itemTitleKey') || 'title';
       content = this.get('content');
       return getProperty(content, itemTitleKey, content);
-    }).property('content').cacheable(),
+    }).property('content'),
     /*
     Determine whether the item is disabled or not
     */
@@ -382,7 +382,7 @@ A Mixin that provides the basic configuration for rendering and interacting with
         itemsView.set('selected', null);
       }
       return disabled;
-    }).property('content', 'content.disabled').cacheable()
+    }).property('content', 'content.disabled')
   });
 
 }).call(this);
@@ -475,30 +475,84 @@ Views that inherits from this view can be enhanced with:
 
 }).call(this);
 
-this["Ember"] = this["Ember"] || {};
-this["Ember"]["TEMPLATES"] = this["Ember"]["TEMPLATES"] || {};
-
-this["Ember"]["TEMPLATES"]["app/templates/views/item-pane"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var stack1, hashTypes, hashContexts, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
-
-function program1(depth0,data) {
-  
-  var buffer = '', stack1, hashTypes, hashContexts, options;
-  data.buffer.push("\n  ");
-  hashTypes = {};
-  hashContexts = {};
-  options = {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  data.buffer.push(escapeExpression(((stack1 = helpers.bsItemPanePartial || depth0.bsItemPanePartial),stack1 ? stack1.call(depth0, "view.content.template", options) : helperMissing.call(depth0, "bsItemPanePartial", "view.content.template", options))));
-  data.buffer.push("\n");
-  return buffer;
-  }
-
-  hashTypes = {};
-  hashContexts = {};
-  stack1 = helpers['if'].call(depth0, "view.content.template", {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  else { data.buffer.push(''); }
-  
-});
+Ember.TEMPLATES["app/templates/views/item-pane"] = Ember.HTMLBars.template((function() {
+  var child0 = (function() {
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("  ");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, get = hooks.get, inline = hooks.inline;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        inline(env, morph0, context, "bsItemPanePartial", [get(env, context, "view.content.template")], {});
+        return fragment;
+      }
+    };
+  }());
+  return {
+    isHTMLBars: true,
+    blockParams: 0,
+    cachedFragment: null,
+    hasRendered: false,
+    build: function build(dom) {
+      var el0 = dom.createDocumentFragment();
+      var el1 = dom.createTextNode("");
+      dom.appendChild(el0, el1);
+      var el1 = dom.createTextNode("");
+      dom.appendChild(el0, el1);
+      return el0;
+    },
+    render: function render(context, env, contextualElement) {
+      var dom = env.dom;
+      var hooks = env.hooks, get = hooks.get, block = hooks.block;
+      dom.detectNamespace(contextualElement);
+      var fragment;
+      if (env.useFragmentCache && dom.canClone) {
+        if (this.cachedFragment === null) {
+          fragment = this.build(dom);
+          if (this.hasRendered) {
+            this.cachedFragment = fragment;
+          } else {
+            this.hasRendered = true;
+          }
+        }
+        if (this.cachedFragment) {
+          fragment = dom.cloneNode(this.cachedFragment, true);
+        }
+      } else {
+        fragment = this.build(dom);
+      }
+      if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
+      var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+      block(env, morph0, context, "if", [get(env, context, "view.content.template")], {}, child0, null);
+      return fragment;
+    }
+  };
+}()));

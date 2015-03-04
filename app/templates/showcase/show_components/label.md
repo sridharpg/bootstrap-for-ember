@@ -3,7 +3,7 @@
 ## Basic
 
 <div class="bs-example">
-    <h4>Heading with label {{bs-label content="Label"}}</h3>
+    <h4>Heading with label {{bs-label content="Label"}}</h4>
 </div>
 
 ``` html

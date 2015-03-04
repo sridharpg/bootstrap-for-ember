@@ -53,7 +53,7 @@ In correspondence with bootstrap css class button sizes `.btn-lg`, `.btn-sm`, or
 <div class="bs-example">
     <p>
         {{bs-button icon="fa fa-check" title="Button with Icon"}}
-    <p>
+    </p>
 </div>
 
 Simply add an `icon` property to the button meta data, such:
