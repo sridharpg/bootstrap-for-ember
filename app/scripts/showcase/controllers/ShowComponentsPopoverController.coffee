@@ -35,11 +35,7 @@ Showcase.ShowComponentsPopoverController = Ember.Controller.extend(
     templPop: Ember.Object.create
         firstName: 'numbers'
         title: 'Popover with Template'
-        template:   'numbers:<ul>' +
-                    '{{#each val in content.numbers}}' +
-                    '   <li>{{val}}</li>' +
-                    '{{/each}}' +
-                    '</ul>'
+        template: 'footer'
         content:
             numbers: [1,2,3]
 )

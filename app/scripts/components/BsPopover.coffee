@@ -399,47 +399,31 @@ Bootstrap.TooltipBoxManager = Ember.Object.create(
     #strings and variables are supported!!
     if path instanceof Object
       object = Ember.Object.create({})
-      for name of path.hash
-        value = path.hash[name]
-        type = options.hashTypes[name]
-
-        #set string directrly
-        if type is "STRING"
-          object.set name, value
-        else if type is "ID"
-
-          #is variable to which we can bind
-          #get context from keywords -> the each helper defines it
-          p = value.split(".")
-          keyword = p[0]
-          o = options.data.keywords[keyword]
-          unless o
-
-            #no context in keywords, assuming current context
-            o = this
-          else
-            p.removeAt 0
-          object._bindings = o  unless object._bindings
-          p.insertAt 0, "_bindings"
-          p = p.join(".")
-          object[name] = ""
-          binding = Ember.Binding.from(p).to(name)
-          binding.connect object
-        else
-          object.set name, value
+      for name of path
+        value = path[name]
+        object.set name, value
     object
 )
 
-Ember.Handlebars.registerHelper "bs-bind-popover", (path) ->
-    options = arguments[arguments.length - 1]
+Ember.HTMLBars._registerHelper "bs-bind-popover", (params, hash, options, env) ->
     object = this
-    object = Bootstrap.TooltipBoxManager.helper.call(this, path, object, options)
+    object = Bootstrap.TooltipBoxManager.helper.call(this, hash, object, options)
+    if params instanceof Array and params.length > 0
+        object = params[0].value()
+        options = env
+    else 
+        options = arguments[arguments.length - 1]
     id = Bootstrap.TooltipBoxManager.registerTip("popover", object, options)
     new Ember.Handlebars.SafeString(Bootstrap.TooltipBoxManager.attribute + "='" + id + "'")
 
-Ember.Handlebars.registerHelper "bs-bind-tooltip", (path) ->
-    options = arguments[arguments.length - 1]
+Ember.HTMLBars._registerHelper "bs-bind-tooltip", (params, hash, options, env) ->
     object = this
-    object = Bootstrap.TooltipBoxManager.helper.call(this, path, object, options)
+    object = Bootstrap.TooltipBoxManager.helper.call(this, hash, object, options)
+    if params instanceof Array and params.length > 0
+        object = params[0].value()
+        options = env
+    else 
+        options = arguments[arguments.length - 1]
+        
     id = Bootstrap.TooltipBoxManager.registerTip("tooltip", object, options)
     new Ember.Handlebars.SafeString(Bootstrap.TooltipBoxManager.attribute + "='" + id + "'")

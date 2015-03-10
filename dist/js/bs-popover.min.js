@@ -350,7 +350,7 @@
       view.set(Bootstrap.TooltipBoxManager.attribute, id);
     },
     helper: function(path, object, options) {
-      var binding, keyword, name, o, p, type, value;
+      var keyword, name, o, p, value;
       if ((typeof path === "string") && path !== "") {
         p = path.split(".");
         keyword = p[0];
@@ -366,51 +366,39 @@
       }
       if (path instanceof Object) {
         object = Ember.Object.create({});
-        for (name in path.hash) {
-          value = path.hash[name];
-          type = options.hashTypes[name];
-          if (type === "STRING") {
-            object.set(name, value);
-          } else if (type === "ID") {
-            p = value.split(".");
-            keyword = p[0];
-            o = options.data.keywords[keyword];
-            if (!o) {
-              o = this;
-            } else {
-              p.removeAt(0);
-            }
-            if (!object._bindings) {
-              object._bindings = o;
-            }
-            p.insertAt(0, "_bindings");
-            p = p.join(".");
-            object[name] = "";
-            binding = Ember.Binding.from(p).to(name);
-            binding.connect(object);
-          } else {
-            object.set(name, value);
-          }
+        for (name in path) {
+          value = path[name];
+          object.set(name, value);
         }
       }
       return object;
     }
   });
 
-  Ember.Handlebars.registerHelper("bs-bind-popover", function(path) {
-    var id, object, options;
-    options = arguments[arguments.length - 1];
+  Ember.HTMLBars._registerHelper("bs-bind-popover", function(params, hash, options, env) {
+    var id, object;
     object = this;
-    object = Bootstrap.TooltipBoxManager.helper.call(this, path, object, options);
+    object = Bootstrap.TooltipBoxManager.helper.call(this, hash, object, options);
+    if (params instanceof Array && params.length > 0) {
+      object = params[0].value();
+      options = env;
+    } else {
+      options = arguments[arguments.length - 1];
+    }
     id = Bootstrap.TooltipBoxManager.registerTip("popover", object, options);
     return new Ember.Handlebars.SafeString(Bootstrap.TooltipBoxManager.attribute + "='" + id + "'");
   });
 
-  Ember.Handlebars.registerHelper("bs-bind-tooltip", function(path) {
-    var id, object, options;
-    options = arguments[arguments.length - 1];
+  Ember.HTMLBars._registerHelper("bs-bind-tooltip", function(params, hash, options, env) {
+    var id, object;
     object = this;
-    object = Bootstrap.TooltipBoxManager.helper.call(this, path, object, options);
+    object = Bootstrap.TooltipBoxManager.helper.call(this, hash, object, options);
+    if (params instanceof Array && params.length > 0) {
+      object = params[0].value();
+      options = env;
+    } else {
+      options = arguments[arguments.length - 1];
+    }
     id = Bootstrap.TooltipBoxManager.registerTip("tooltip", object, options);
     return new Ember.Handlebars.SafeString(Bootstrap.TooltipBoxManager.attribute + "='" + id + "'");
   });
