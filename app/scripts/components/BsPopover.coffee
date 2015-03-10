@@ -184,8 +184,8 @@ Bootstrap.BsPopoverComponent = Ember.Component.extend(
 
     actions:
         close: (selectedItem) ->
-            Bootstrap.TooltipBoxManager.removeTip @get("tip_id")
             @sendAction "action", selectedItem
+            Bootstrap.TooltipBoxManager.removeTip @get("tip_id")            
 
 )
 

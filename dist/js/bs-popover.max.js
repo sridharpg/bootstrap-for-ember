@@ -157,8 +157,8 @@
     },
     actions: {
       close: function(selectedItem) {
-        Bootstrap.TooltipBoxManager.removeTip(this.get("tip_id"));
-        return this.sendAction("action", selectedItem);
+        this.sendAction("action", selectedItem);
+        return Bootstrap.TooltipBoxManager.removeTip(this.get("tip_id"));
       }
     }
   });
