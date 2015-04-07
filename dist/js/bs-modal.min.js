@@ -305,6 +305,7 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
   var child0 = (function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.1",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -347,12 +348,15 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
   var child1 = (function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.1",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
         var el1 = dom.createTextNode("                ");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -378,7 +382,7 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
         inline(env, morph0, context, "view", [get(env, context, "view.body")], {});
         return fragment;
       }
@@ -387,12 +391,15 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
   var child2 = (function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.1",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
         var el1 = dom.createTextNode("                ");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -418,7 +425,7 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
         content(env, morph0, context, "yield");
         return fragment;
       }
@@ -428,12 +435,15 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.1",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
           var el0 = dom.createDocumentFragment();
           var el1 = dom.createTextNode("                    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -459,7 +469,7 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
           inline(env, morph0, context, "bs-button", [], {"content": get(env, context, "button"), "targetObjectBinding": "view.targetObject", "loading": get(env, context, "loadingState")});
           return fragment;
         }
@@ -468,12 +478,15 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.1",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
           var el0 = dom.createDocumentFragment();
           var el1 = dom.createTextNode("                    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -499,7 +512,7 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
           inline(env, morph0, context, "bs-button", [], {"content": get(env, context, "button"), "targetObjectBinding": "view.targetObject"});
           return fragment;
         }
@@ -507,14 +520,13 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.1",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -538,8 +550,9 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "if", [get(env, context, "button.loadingText")], {}, child0, child1);
         return fragment;
       }
@@ -548,12 +561,15 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
   var child4 = (function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.1",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
         var el1 = dom.createTextNode("                ");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -579,7 +595,7 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
         inline(env, morph0, context, "view", [get(env, context, "this")], {});
         return fragment;
       }
@@ -587,6 +603,7 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
   }());
   return {
     isHTMLBars: true,
+    revision: "Ember@1.11.1",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -617,7 +634,11 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
       dom.setAttribute(el4,"class","modal-title");
       var el5 = dom.createTextNode("\n");
       dom.appendChild(el4, el5);
+      var el5 = dom.createComment("");
+      dom.appendChild(el4, el5);
       var el5 = dom.createTextNode("                ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createComment("");
       dom.appendChild(el4, el5);
       var el5 = dom.createTextNode("\n            ");
       dom.appendChild(el4, el5);
@@ -631,6 +652,8 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
       dom.setAttribute(el3,"class","modal-body");
       var el4 = dom.createTextNode("\n");
       dom.appendChild(el3, el4);
+      var el4 = dom.createComment("");
+      dom.appendChild(el3, el4);
       var el4 = dom.createTextNode("        ");
       dom.appendChild(el3, el4);
       dom.appendChild(el2, el3);
@@ -639,7 +662,9 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
       var el3 = dom.createElement("div");
       var el4 = dom.createTextNode("\n");
       dom.appendChild(el3, el4);
-      var el4 = dom.createTextNode("");
+      var el4 = dom.createComment("");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createComment("");
       dom.appendChild(el3, el4);
       var el4 = dom.createTextNode("        ");
       dom.appendChild(el3, el4);
@@ -679,12 +704,11 @@ Ember.TEMPLATES["components/bs-modal"] = Ember.HTMLBars.template((function() {
       var element3 = dom.childAt(element2, [1]);
       var element4 = dom.childAt(element2, [3]);
       var element5 = dom.childAt(element1, [5]);
-      if (this.cachedFragment) { dom.repairClonedNode(element5,[1]); }
-      var morph0 = dom.createMorphAt(element4,0,1);
-      var morph1 = dom.createUnsafeMorphAt(element4,1,2);
-      var morph2 = dom.createMorphAt(dom.childAt(element1, [3]),0,1);
-      var morph3 = dom.createMorphAt(element5,0,1);
-      var morph4 = dom.createMorphAt(element5,1,2);
+      var morph0 = dom.createMorphAt(element4,1,1);
+      var morph1 = dom.createUnsafeMorphAt(element4,3,3);
+      var morph2 = dom.createMorphAt(dom.childAt(element1, [3]),1,1);
+      var morph3 = dom.createMorphAt(element5,1,1);
+      var morph4 = dom.createMorphAt(element5,2,2);
       element(env, element3, context, "bind-attr", [], {"class": ":close allowClose::hide"});
       block(env, morph0, context, "if", [get(env, context, "titleIconClasses")], {}, child0, null);
       content(env, morph1, context, "title");
