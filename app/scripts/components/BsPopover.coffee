@@ -121,7 +121,7 @@ Bootstrap.BsPopoverComponent = Ember.Component.extend(
 
         if @get("data.trigger") is "hover" and @get("data.sticky")
             @$().on "mouseenter", ->
-                clearTimeout Bootstrap.TooltipBoxManager.timeout
+                Ember.run.cancel Bootstrap.TooltipBoxManager.timeout
 
         # @$().on "mouseleave", =>
         #     Bootstrap.TooltipBoxManager.removeTip @get("tip_id")            
@@ -130,7 +130,8 @@ Bootstrap.BsPopoverComponent = Ember.Component.extend(
             @afterRender()
 
     afterRender: ->
-        @notifyPropertyChange "content"
+        Ember.run @, ->
+            @notifyPropertyChange "content"
 
     realPlacement: (->
         return null  unless @$tip
@@ -355,9 +356,8 @@ Bootstrap.TooltipBoxManager = Ember.Object.create(
     return
 
   timedRemove: (id) ->
-    self = this
-    @timeout = setTimeout(->
-      self.removeTip id
+    @timeout = Ember.run.later(@, ->
+      this.removeTip id
       return
     , 100)
     return

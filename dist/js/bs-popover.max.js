@@ -86,7 +86,7 @@
       this.set("inserted", true);
       if (this.get("data.trigger") === "hover" && this.get("data.sticky")) {
         this.$().on("mouseenter", function() {
-          return clearTimeout(Bootstrap.TooltipBoxManager.timeout);
+          return Ember.run.cancel(Bootstrap.TooltipBoxManager.timeout);
         });
       }
       return this.$().find("img").load(function() {
@@ -94,7 +94,9 @@
       });
     },
     afterRender: function() {
-      return this.notifyPropertyChange("content");
+      return Ember.run(this, function() {
+        return this.notifyPropertyChange("content");
+      });
     },
     realPlacement: (function() {
       var $parent, actualHeight, actualWidth, autoPlace, autoToken, docScroll, orgPlacement, parentHeight, parentLeft, parentWidth, placement, pos;
@@ -322,10 +324,8 @@
       }
     },
     timedRemove: function(id) {
-      var self;
-      self = this;
-      this.timeout = setTimeout(function() {
-        self.removeTip(id);
+      this.timeout = Ember.run.later(this, function() {
+        this.removeTip(id);
       }, 100);
     },
     removeTip: function(id) {
