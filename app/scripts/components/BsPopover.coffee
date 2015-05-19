@@ -321,16 +321,18 @@ Bootstrap.TooltipBoxManager = Ember.Object.create(
   showTip: (id) ->
     data = @registeredTips[id].data
     type = @registeredTips[id].type
-    unless @showing[id]
-      @showing[id] = true
-      obj = Ember.Object.create(
-        data: data
-        tip_id: id
-      )
-      if type is "tooltip"
-        @tooltips.pushObject obj
-      else
-        @popovers.pushObject obj
+    ele = $("["+@get('attribute')+"="+id+"]")[0]
+    if !data.ellipsis || ele.offsetWidth < ele.scrollWidth
+        unless @showing[id]
+          @showing[id] = true
+          obj = Ember.Object.create(
+            data: data
+            tip_id: id
+          )
+          if type is "tooltip"
+            @tooltips.pushObject obj
+          else
+            @popovers.pushObject obj
     return
 
   hideTip: (id, allowTimer) ->
