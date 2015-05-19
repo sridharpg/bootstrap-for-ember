@@ -287,19 +287,22 @@
     showing: {},
     timeout: null,
     showTip: function(id) {
-      var data, obj, type;
+      var data, ele, obj, type;
       data = this.registeredTips[id].data;
       type = this.registeredTips[id].type;
-      if (!this.showing[id]) {
-        this.showing[id] = true;
-        obj = Ember.Object.create({
-          data: data,
-          tip_id: id
-        });
-        if (type === "tooltip") {
-          this.tooltips.pushObject(obj);
-        } else {
-          this.popovers.pushObject(obj);
+      ele = $("[" + this.get('attribute') + "=" + id + "]")[0];
+      if (!data.ellipsis || ele.offsetWidth < ele.scrollWidth) {
+        if (!this.showing[id]) {
+          this.showing[id] = true;
+          obj = Ember.Object.create({
+            data: data,
+            tip_id: id
+          });
+          if (type === "tooltip") {
+            this.tooltips.pushObject(obj);
+          } else {
+            this.popovers.pushObject(obj);
+          }
         }
       }
     },
