@@ -3,9 +3,6 @@ popoverTemplate = '' +
     '<div class="arrow"></div>' +
     '{{#if title}}<h3 class="popover-title">{{title}}</h3>{{/if}}' +
     '<div class="popover-content">' +
-    '{{#if template}}' +
-    '   {{partial partialTemplateName}}' +
-    '{{else}}' +
     '   {{#if content}}' +
     '       {{#if html}}' +
     '           {{{content}}}' +
@@ -15,8 +12,7 @@ popoverTemplate = '' +
     '   {{else}}' +
     '       {{yield}}' +
     '   {{/if}}' +
-    '{{/if}}' +
-    '    </div>'
+    '</div>'
 
 Ember.TEMPLATES["components/bs-popover"] = Ember.Handlebars.compile(popoverTemplate)
 
@@ -104,13 +100,11 @@ Bootstrap.BsPopoverComponent = Ember.Component.extend(
     ).observes("content", "realPlacement", "inserted", "isVisible")
 
     init: ->
-        @_super()
         @set "html", @get("data.html") or false
-        @set "template", @get("data.template") isnt `undefined`
-        if @get("template")
-            name = "components/bs-popover/partial-content-" + @get("tip_id")
-            tpl = @get("data.template")
-            @set "partialTemplateName", tpl
+        template = @get("data.template")
+        if template
+            @set "template", Ember.Handlebars.compile(template)
+        @_super()
 
     didInsertElement: ->
         @$tip = @$()
@@ -280,7 +274,7 @@ Bootstrap.TooltipBoxManager = Ember.Object.create(
         self.setupBindings()
         return
 
-    options.data.view.on "willClearRender", ->
+    options.data.view.one "willClearRender", ->
       pop = self.registeredTips[id]
       if pop.eventName is 'manual'
         pop.data.removeObserver "show", pop
@@ -406,8 +400,9 @@ Bootstrap.TooltipBoxManager = Ember.Object.create(
 )
 
 Ember.HTMLBars._registerHelper "bs-bind-popover", (params, hash, options, env) ->
-    object = this
-    object = Bootstrap.TooltipBoxManager.helper.call(this, hash, object, options)
+    view = env.data.view
+    object = view
+    object = Bootstrap.TooltipBoxManager.helper.call(view, hash, object, options)
     if params instanceof Array and params.length > 0
         object = params[0].value()
         options = env
@@ -417,8 +412,9 @@ Ember.HTMLBars._registerHelper "bs-bind-popover", (params, hash, options, env) -
     new Ember.Handlebars.SafeString(Bootstrap.TooltipBoxManager.attribute + "='" + id + "'")
 
 Ember.HTMLBars._registerHelper "bs-bind-tooltip", (params, hash, options, env) ->
-    object = this
-    object = Bootstrap.TooltipBoxManager.helper.call(this, hash, object, options)
+    view = env.data.view
+    object = view
+    object = Bootstrap.TooltipBoxManager.helper.call(view, hash, object, options)
     if params instanceof Array and params.length > 0
         object = params[0].value()
         options = env
