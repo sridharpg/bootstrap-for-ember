@@ -1,7 +1,7 @@
 Ember.TEMPLATES["ads"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -40,7 +40,7 @@ Ember.TEMPLATES["ads"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["application"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -237,7 +237,7 @@ Ember.TEMPLATES["demo-template"] = Ember.HTMLBars.template((function() {
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -278,7 +278,7 @@ Ember.TEMPLATES["demo-template"] = Ember.HTMLBars.template((function() {
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -327,7 +327,7 @@ Ember.TEMPLATES["footer"] = Ember.HTMLBars.template((function() {
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -371,7 +371,7 @@ Ember.TEMPLATES["footer"] = Ember.HTMLBars.template((function() {
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -415,7 +415,7 @@ Ember.TEMPLATES["footer"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["header"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -450,7 +450,7 @@ Ember.TEMPLATES["header"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["index"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -520,7 +520,7 @@ Ember.TEMPLATES["leftnav"] = Ember.HTMLBars.template((function() {
       var child0 = (function() {
         return {
           isHTMLBars: true,
-          revision: "Ember@1.11.1",
+          revision: "Ember@1.12.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -563,7 +563,7 @@ Ember.TEMPLATES["leftnav"] = Ember.HTMLBars.template((function() {
       var child1 = (function() {
         return {
           isHTMLBars: true,
-          revision: "Ember@1.11.1",
+          revision: "Ember@1.12.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -605,7 +605,7 @@ Ember.TEMPLATES["leftnav"] = Ember.HTMLBars.template((function() {
       }());
       return {
         isHTMLBars: true,
-        revision: "Ember@1.11.1",
+        revision: "Ember@1.12.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -656,7 +656,7 @@ Ember.TEMPLATES["leftnav"] = Ember.HTMLBars.template((function() {
     }());
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -704,7 +704,7 @@ Ember.TEMPLATES["leftnav"] = Ember.HTMLBars.template((function() {
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -747,7 +747,7 @@ Ember.TEMPLATES["nav-main"] = Ember.HTMLBars.template((function() {
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -783,7 +783,7 @@ Ember.TEMPLATES["nav-main"] = Ember.HTMLBars.template((function() {
   var child1 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -819,7 +819,7 @@ Ember.TEMPLATES["nav-main"] = Ember.HTMLBars.template((function() {
   var child2 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -854,7 +854,7 @@ Ember.TEMPLATES["nav-main"] = Ember.HTMLBars.template((function() {
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -992,7 +992,7 @@ Ember.TEMPLATES["show_components/alert"] = Ember.HTMLBars.template((function() {
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -1069,7 +1069,7 @@ Ember.TEMPLATES["show_components/alert"] = Ember.HTMLBars.template((function() {
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -1471,7 +1471,7 @@ Ember.TEMPLATES["show_components/alert"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["show_components/badge"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -1748,7 +1748,7 @@ Ember.TEMPLATES["show_components/badge"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["show_components/breadcrumbs"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -1854,7 +1854,7 @@ Ember.TEMPLATES["show_components/button"] = Ember.HTMLBars.template((function() 
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -1890,7 +1890,7 @@ Ember.TEMPLATES["show_components/button"] = Ember.HTMLBars.template((function() 
   var child1 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -1926,7 +1926,7 @@ Ember.TEMPLATES["show_components/button"] = Ember.HTMLBars.template((function() 
   var child2 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -1962,7 +1962,7 @@ Ember.TEMPLATES["show_components/button"] = Ember.HTMLBars.template((function() 
   var child3 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -1998,7 +1998,7 @@ Ember.TEMPLATES["show_components/button"] = Ember.HTMLBars.template((function() 
   var child4 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -2034,7 +2034,7 @@ Ember.TEMPLATES["show_components/button"] = Ember.HTMLBars.template((function() 
   var child5 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -2070,7 +2070,7 @@ Ember.TEMPLATES["show_components/button"] = Ember.HTMLBars.template((function() 
   var child6 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -2105,7 +2105,7 @@ Ember.TEMPLATES["show_components/button"] = Ember.HTMLBars.template((function() 
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -3246,7 +3246,7 @@ Ember.TEMPLATES["show_components/buttonGroup"] = Ember.HTMLBars.template((functi
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -3295,7 +3295,7 @@ Ember.TEMPLATES["show_components/buttonGroup"] = Ember.HTMLBars.template((functi
   var child1 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -3338,7 +3338,7 @@ Ember.TEMPLATES["show_components/buttonGroup"] = Ember.HTMLBars.template((functi
   var child2 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -3381,7 +3381,7 @@ Ember.TEMPLATES["show_components/buttonGroup"] = Ember.HTMLBars.template((functi
   var child3 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -3424,7 +3424,7 @@ Ember.TEMPLATES["show_components/buttonGroup"] = Ember.HTMLBars.template((functi
   var child4 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -3467,7 +3467,7 @@ Ember.TEMPLATES["show_components/buttonGroup"] = Ember.HTMLBars.template((functi
   var child5 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -3509,7 +3509,7 @@ Ember.TEMPLATES["show_components/buttonGroup"] = Ember.HTMLBars.template((functi
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -3822,7 +3822,7 @@ Ember.TEMPLATES["show_components/buttonGroup"] = Ember.HTMLBars.template((functi
 Ember.TEMPLATES["show_components/growl-notif"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -4112,7 +4112,7 @@ Ember.TEMPLATES["show_components/growl-notif"] = Ember.HTMLBars.template((functi
 Ember.TEMPLATES["show_components/items_action_bar"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -4305,7 +4305,7 @@ Ember.TEMPLATES["show_components/items_action_bar"] = Ember.HTMLBars.template((f
 Ember.TEMPLATES["show_components/label"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -4508,7 +4508,7 @@ Ember.TEMPLATES["show_components/label"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["show_components/list-group"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -4731,7 +4731,7 @@ Ember.TEMPLATES["show_components/modal"] = Ember.HTMLBars.template((function() {
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -4772,7 +4772,7 @@ Ember.TEMPLATES["show_components/modal"] = Ember.HTMLBars.template((function() {
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -5239,7 +5239,7 @@ Ember.TEMPLATES["show_components/modal"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["show_components/notifications"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -5548,7 +5548,7 @@ Ember.TEMPLATES["show_components/notifications"] = Ember.HTMLBars.template((func
 Ember.TEMPLATES["show_components/page-header"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -5636,7 +5636,7 @@ Ember.TEMPLATES["show_components/panel"] = Ember.HTMLBars.template((function() {
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -5678,7 +5678,7 @@ Ember.TEMPLATES["show_components/panel"] = Ember.HTMLBars.template((function() {
   var child1 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -5720,7 +5720,7 @@ Ember.TEMPLATES["show_components/panel"] = Ember.HTMLBars.template((function() {
   var child2 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -5762,7 +5762,7 @@ Ember.TEMPLATES["show_components/panel"] = Ember.HTMLBars.template((function() {
   var child3 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -5804,7 +5804,7 @@ Ember.TEMPLATES["show_components/panel"] = Ember.HTMLBars.template((function() {
   var child4 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -5846,7 +5846,7 @@ Ember.TEMPLATES["show_components/panel"] = Ember.HTMLBars.template((function() {
   var child5 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -5888,7 +5888,7 @@ Ember.TEMPLATES["show_components/panel"] = Ember.HTMLBars.template((function() {
   var child6 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -5930,7 +5930,7 @@ Ember.TEMPLATES["show_components/panel"] = Ember.HTMLBars.template((function() {
   var child7 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -5972,7 +5972,7 @@ Ember.TEMPLATES["show_components/panel"] = Ember.HTMLBars.template((function() {
   var child8 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -6014,7 +6014,7 @@ Ember.TEMPLATES["show_components/panel"] = Ember.HTMLBars.template((function() {
   var child9 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -6055,7 +6055,7 @@ Ember.TEMPLATES["show_components/panel"] = Ember.HTMLBars.template((function() {
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -6356,7 +6356,7 @@ Ember.TEMPLATES["show_components/panel"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["show_components/pills"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -6714,7 +6714,7 @@ Ember.TEMPLATES["show_components/pills"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["show_components/popover"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -7311,7 +7311,7 @@ Ember.TEMPLATES["show_components/progressbar"] = Ember.HTMLBars.template((functi
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -7365,7 +7365,7 @@ Ember.TEMPLATES["show_components/progressbar"] = Ember.HTMLBars.template((functi
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -7761,7 +7761,7 @@ Ember.TEMPLATES["show_components/tabs-panes"] = Ember.HTMLBars.template((functio
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -7796,7 +7796,7 @@ Ember.TEMPLATES["show_components/tabs-panes"] = Ember.HTMLBars.template((functio
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -8098,7 +8098,7 @@ Ember.TEMPLATES["show_components/tabs-with-routes"] = Ember.HTMLBars.template((f
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -8133,7 +8133,7 @@ Ember.TEMPLATES["show_components/tabs-with-routes"] = Ember.HTMLBars.template((f
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -8403,7 +8403,7 @@ Ember.TEMPLATES["show_components/tabs"] = Ember.HTMLBars.template((function() {
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -8438,7 +8438,7 @@ Ember.TEMPLATES["show_components/tabs"] = Ember.HTMLBars.template((function() {
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -8568,7 +8568,7 @@ Ember.TEMPLATES["show_components/well"] = Ember.HTMLBars.template((function() {
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -8604,7 +8604,7 @@ Ember.TEMPLATES["show_components/well"] = Ember.HTMLBars.template((function() {
   var child1 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -8640,7 +8640,7 @@ Ember.TEMPLATES["show_components/well"] = Ember.HTMLBars.template((function() {
   var child2 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -8675,7 +8675,7 @@ Ember.TEMPLATES["show_components/well"] = Ember.HTMLBars.template((function() {
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -9034,7 +9034,7 @@ Ember.TEMPLATES["show_components/well"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["show_components/wizard"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -9263,7 +9263,7 @@ Ember.TEMPLATES["show_components/wizard"] = Ember.HTMLBars.template((function() 
 Ember.TEMPLATES["social-buttons"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -9359,7 +9359,7 @@ Ember.TEMPLATES["social-buttons"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["tabs/bar-tabpane"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -9407,7 +9407,7 @@ Ember.TEMPLATES["tabs/bar-tabpane"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["tabs/baz-tabpane"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -9449,7 +9449,7 @@ Ember.TEMPLATES["tabs/baz-tabpane"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["tabs/foo-tabpane"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -9497,7 +9497,7 @@ Ember.TEMPLATES["tabs/foo-tabpane"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["user"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -9545,7 +9545,7 @@ Ember.TEMPLATES["user"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["user/activities"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -9587,7 +9587,7 @@ Ember.TEMPLATES["user/activities"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["user/general"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -9629,7 +9629,7 @@ Ember.TEMPLATES["user/general"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["user/privacy"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -9671,7 +9671,7 @@ Ember.TEMPLATES["user/privacy"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["wizard/step1"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -9710,7 +9710,7 @@ Ember.TEMPLATES["wizard/step1"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["wizard/step2"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -9749,7 +9749,7 @@ Ember.TEMPLATES["wizard/step2"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["wizard/step3"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,

@@ -1,7 +1,7 @@
 (function() {
   var popoverTemplate, template, tooltipTemplate;
 
-  popoverTemplate = '' + '<div class="arrow"></div>' + '{{#if title}}<h3 class="popover-title">{{title}}</h3>{{/if}}' + '<div class="popover-content">' + '{{#if template}}' + '   {{partial partialTemplateName}}' + '{{else}}' + '   {{#if content}}' + '       {{#if html}}' + '           {{{content}}}' + '       {{else}}' + '           {{content}}' + '       {{/if}}' + '   {{else}}' + '       {{yield}}' + '   {{/if}}' + '{{/if}}' + '    </div>';
+  popoverTemplate = '' + '<div class="arrow"></div>' + '{{#if title}}<h3 class="popover-title">{{title}}</h3>{{/if}}' + '<div class="popover-content">' + '   {{#if content}}' + '       {{#if html}}' + '           {{{content}}}' + '       {{else}}' + '           {{content}}' + '       {{/if}}' + '   {{else}}' + '       {{yield}}' + '   {{/if}}' + '</div>';
 
   Ember.TEMPLATES["components/bs-popover"] = Ember.Handlebars.compile(popoverTemplate);
 
@@ -66,15 +66,13 @@
       }
     }).observes("content", "realPlacement", "inserted", "isVisible"),
     init: function() {
-      var name, tpl;
-      this._super();
+      var template;
       this.set("html", this.get("data.html") || false);
-      this.set("template", this.get("data.template") !== undefined);
-      if (this.get("template")) {
-        name = "components/bs-popover/partial-content-" + this.get("tip_id");
-        tpl = this.get("data.template");
-        return this.set("partialTemplateName", tpl);
+      template = this.get("data.template");
+      if (template) {
+        this.set("template", Ember.Handlebars.compile(template));
       }
+      return this._super();
     },
     didInsertElement: function() {
       var name,
@@ -235,7 +233,7 @@
           self.setupBindings();
         });
       }
-      options.data.view.on("willClearRender", function() {
+      options.data.view.one("willClearRender", function() {
         var pop;
         pop = self.registeredTips[id];
         if (pop.eventName === 'manual') {
@@ -376,9 +374,10 @@
   });
 
   Ember.HTMLBars._registerHelper("bs-bind-popover", function(params, hash, options, env) {
-    var id, object;
-    object = this;
-    object = Bootstrap.TooltipBoxManager.helper.call(this, hash, object, options);
+    var id, object, view;
+    view = env.data.view;
+    object = view;
+    object = Bootstrap.TooltipBoxManager.helper.call(view, hash, object, options);
     if (params instanceof Array && params.length > 0) {
       object = params[0].value();
       options = env;
@@ -390,9 +389,10 @@
   });
 
   Ember.HTMLBars._registerHelper("bs-bind-tooltip", function(params, hash, options, env) {
-    var id, object;
-    object = this;
-    object = Bootstrap.TooltipBoxManager.helper.call(this, hash, object, options);
+    var id, object, view;
+    view = env.data.view;
+    object = view;
+    object = Bootstrap.TooltipBoxManager.helper.call(view, hash, object, options);
     if (params instanceof Array && params.length > 0) {
       object = params[0].value();
       options = env;

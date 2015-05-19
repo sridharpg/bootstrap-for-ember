@@ -479,7 +479,7 @@ Ember.TEMPLATES["app/templates/views/item-pane"] = Ember.HTMLBars.template((func
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.11.1",
+      revision: "Ember@1.12.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -521,7 +521,7 @@ Ember.TEMPLATES["app/templates/views/item-pane"] = Ember.HTMLBars.template((func
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.11.1",
+    revision: "Ember@1.12.0",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
