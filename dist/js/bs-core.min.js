@@ -87,7 +87,7 @@
   set = Ember.set;
 
   Bootstrap.TypeSupport = Ember.Mixin.create({
-    classTypePrefix: Ember.required(String),
+    classTypePrefix: "",
     classNameBindings: ['typeClass'],
     type: 'default',
     typeClass: (function() {
@@ -113,7 +113,7 @@
   set = Ember.set;
 
   Bootstrap.SizeSupport = Ember.Mixin.create({
-    classTypePrefix: Ember.required(String),
+    classTypePrefix: "",
     classNameBindings: ['sizeClass', 'largeSizeClass', 'smallSizeClass', 'extraSmallSizeClass'],
     size: null,
     xs: null,
@@ -479,7 +479,7 @@ Ember.TEMPLATES["app/templates/views/item-pane"] = Ember.HTMLBars.template((func
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.12.0",
+      revision: "Ember@1.12.1",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -521,7 +521,7 @@ Ember.TEMPLATES["app/templates/views/item-pane"] = Ember.HTMLBars.template((func
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.12.0",
+    revision: "Ember@1.12.1",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,

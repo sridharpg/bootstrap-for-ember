@@ -229,7 +229,7 @@ Ember.TEMPLATES["components/bs-button"] = Ember.HTMLBars.template((function() {
   var child0 = (function() {
     return {
       isHTMLBars: true,
-      revision: "Ember@1.12.0",
+      revision: "Ember@1.12.1",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -271,7 +271,7 @@ Ember.TEMPLATES["components/bs-button"] = Ember.HTMLBars.template((function() {
   }());
   return {
     isHTMLBars: true,
-    revision: "Ember@1.12.0",
+    revision: "Ember@1.12.1",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
@@ -320,7 +320,7 @@ Ember.TEMPLATES["components/bs-button"] = Ember.HTMLBars.template((function() {
 Ember.TEMPLATES["components/bs-btn-toolbar"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.12.0",
+    revision: "Ember@1.12.1",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,

@@ -13,7 +13,7 @@
 Ember.TEMPLATES["components/bs-label"] = Ember.HTMLBars.template((function() {
   return {
     isHTMLBars: true,
-    revision: "Ember@1.12.0",
+    revision: "Ember@1.12.1",
     blockParams: 0,
     cachedFragment: null,
     hasRendered: false,
