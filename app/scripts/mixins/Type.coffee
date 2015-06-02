@@ -3,7 +3,7 @@ get = Ember.get
 set = Ember.set
 
 Bootstrap.TypeSupport = Ember.Mixin.create(
-    classTypePrefix: Ember.required(String)
+    classTypePrefix: ""
     classNameBindings: ['typeClass']
     type: 'default'
 

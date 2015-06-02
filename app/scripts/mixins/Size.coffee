@@ -3,7 +3,7 @@ get = Ember.get
 set = Ember.set
 
 Bootstrap.SizeSupport = Ember.Mixin.create(
-    classTypePrefix: Ember.required(String)
+    classTypePrefix: ""
     classNameBindings: ['sizeClass', 'largeSizeClass', 'smallSizeClass', 'extraSmallSizeClass']
     #Size value according to Bootstrap sizes: sm/lg/xs
     size: null
